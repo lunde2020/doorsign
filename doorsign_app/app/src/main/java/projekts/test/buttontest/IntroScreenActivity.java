@@ -6,6 +6,7 @@ package projekts.test.buttontest;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -152,7 +153,8 @@ public class IntroScreenActivity extends AppCompatActivity{
 	    }
 
 	    private void endIntroduction() {
-	        finish();
+			Intent i = new Intent(getApplicationContext(), Main_Start.class);
+			startActivity(i);
 	        overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
 	    }
 
