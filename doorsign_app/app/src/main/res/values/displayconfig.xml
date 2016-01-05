@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<resources>
+
+        <item name="display_width" format="float" type="dimen">800.0</item>                   //Displaybreite in Pixel festlegen
+        <item name="display_height" format="float" type="dimen">600.0</item>                  //Displayhöhe in Pixel festlegen
+
+
+</resources>

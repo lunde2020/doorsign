@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <string name="config_titel">TITEL</string>
+    <string name="config_name">NAME</string>
+    <string name="config_nummer">RAUMNUMMER</string>
+    <string name="config_synch">UHRZEIT</string>
+    <string name="config_status">STATUS</string>
+    <string name="config_nachricht">NACHRICHT</string>
+    <string name="config_makepic">EREZEUGE BILD</string>
+
+</resources>
