@@ -4,9 +4,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
     android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_marginRight="10dp"
+    android:gravity="top|bottom">
 
     <LinearLayout
         android:orientation="vertical"
@@ -214,9 +216,9 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="bottom|center_horizontal"
         android:layout_marginTop="10dp"
-        android:background="#e1732a" >
+        android:background="#e1732a">
 
         <TextView
             android:layout_width="wrap_content"
@@ -229,22 +231,15 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent">
-
-    </LinearLayout>
-
-    <LinearLayout
         android:orientation="horizontal"
-        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1"
-        android:background="@android:color/transparent" >
+        android:background="@android:color/transparent"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="2dp">
 
         <com.makeramen.roundedimageview.RoundedImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -269,10 +264,9 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="#e1742b">
+            android:layout_height="110dp"
+            android:background="#e1742b"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="match_parent"

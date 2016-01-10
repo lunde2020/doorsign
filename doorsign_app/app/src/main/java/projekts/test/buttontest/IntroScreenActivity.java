@@ -28,7 +28,7 @@ import android.widget.LinearLayout;
 @SuppressLint("InlinedApi")
 public class IntroScreenActivity extends AppCompatActivity{
 
-	static final int TOTAL_PAGES = 4;
+	static final int TOTAL_PAGES = 6;
 	Button btnSkip, btnDone;
     ImageButton btnNext;
     ViewPager viewpager;
@@ -188,6 +188,13 @@ public class IntroScreenActivity extends AppCompatActivity{
 					break;
 				case 3:
 					introScreenFragment = new IntroScreenFragment().newInstance(R.layout.fragment_screen4);
+					break;
+
+				case 4:
+					introScreenFragment = new IntroScreenFragment().newInstance(R.layout.fragment_screen5);
+					break;
+				case 5:
+					introScreenFragment = new IntroScreenFragment().newInstance(R.layout.fragment_screen6);
 					break;
 			}
 			return introScreenFragment;

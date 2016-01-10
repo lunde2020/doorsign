@@ -3,15 +3,15 @@
     android:id="@+id/splashScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark"
+    android:background="#ffffff"
     android:orientation="vertical">
 
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
-        android:src="@drawable/message"
+        android:src="@drawable/logo_homescreen"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true" />
 
@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:text="Topping In"
-        android:textColor="#A6D6F6"
+        android:text="@string/splashtext"
+        android:textColor="#6f7071"
         android:textSize="30sp" />
 
 </RelativeLayout>
