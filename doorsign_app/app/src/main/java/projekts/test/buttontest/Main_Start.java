@@ -61,6 +61,7 @@ public class Main_Start extends Activity {
         imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
         homescreen_name = (TextView) findViewById(R.id.homescreen_name);
         contactphoto = (ImageView) findViewById(R.id.imageView3);
+        int x = 1;
 
 
         SharedPreferences app_preferences =
