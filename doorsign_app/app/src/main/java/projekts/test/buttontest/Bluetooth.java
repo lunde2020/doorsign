@@ -1,4 +1,4 @@
-//package com.example.jorei.bluetooth_filetransfer;
+package projekts.test.buttontest;
 
 
 import android.bluetooth.BluetoothAdapter;
@@ -14,7 +14,7 @@ import java.io.File;
 import java.util.List;
 
 /**
- * Created by Jorei on 04.01.2016.
+ * Created by Rejo on 04.01.2016.
  */
 
 public class Bluetooth extends AppCompatActivity {
