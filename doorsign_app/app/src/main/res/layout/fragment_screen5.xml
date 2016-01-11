@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:background="#00bcd4"
+    android:background="#d78417"
     android:orientation="vertical"
     android:layout_weight="6"
     android:paddingTop="48dp">
@@ -18,10 +18,10 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerInside"
-            android:src="@mipmap/ic_build_white_48dp"
+            android:src="@drawable/screensh"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:gravity="center"
@@ -31,7 +31,7 @@
 
     <TextView
         android:id="@+id/screen_heading"
-        android:text="@string/screen3_title"
+        android:text="@string/screen5_title"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/screen_desc"
-        android:text="@string/screen3_desc"
+        android:text="@string/screen5_desc"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

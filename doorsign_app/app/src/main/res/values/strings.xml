@@ -2,11 +2,19 @@
     <string name="app_name">doorEink</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="screen1_title">Unlimited Calls</string>
-    <string name="screen1_desc">Call your friends, family, Relatives free of cost anytime anywhere.</string>
-    <string name="screen2_title">Group Conversations</string>
-    <string name="screen2_desc">Create your own group and share Snapshots, Videos etc. </string>
-    <string name="screen3_title">Synchronize with your laptop</string>
-    <string name="screen3_desc">Get notified with your calls and messages to your laptop</string>
+
+    //Intro und Splash screen
+    <string name="screen1_title">Türschild aktualisieren</string>
+    <string name="screen1_desc">Hier kannst du dein eigenes Türschild erstellen und aktualisieren. Zuvor musst du jedoch einen Kontakt auswählen.</string>
+    <string name="screen2_title">Benutzer auswählen</string>
+    <string name="screen2_desc">Die Benutzer werden mit deinem Google-Konto synchronisiert. Wähle einfach aus!</string>
+    <string name="screen3_title">Türschild konfigurieren</string>
+    <string name="screen3_desc">Hier kannst du die Aktualisierungszeit, Verwendung eines WakeUp-Transmitters und viele andere Ding einrichten.</string>
+    <string name="screen4_title">FAQ</string>
+    <string name="screen4_desc">Hier werden all deine Fragen zur App beantwortet</string>
+
+    <string name="screen5_title">Bild testen</string>
+    <string name="screen5_desc">Um die App bessr erklären zu können auch mit Bildern</string>
+    <string name="splashtext">dooRsign</string>
 
 </resources>
