@@ -15,19 +15,19 @@ import android.graphics.BitmapFactory;
 
 import android.media.Image;
 import android.net.Uri;
-        import android.os.Bundle;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.ContactsContract;
-        import android.view.View;
-        import android.view.View.OnClickListener;
-        import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
-        import android.widget.Toast;
-        import android.app.Activity;
-        import android.content.Intent;
-        import android.database.Cursor;
+import android.widget.Toast;
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -50,8 +50,6 @@ public class ReadContact extends Activity {
     TextView textNote;
 
 
-
-
     final int RQS_PICKCONTACT = 1;
 
     @Override
@@ -69,10 +67,6 @@ public class ReadContact extends Activity {
         textpostalCode = (TextView) findViewById(R.id.code);
         textpostalCountry = (TextView) findViewById(R.id.country);
         textNote = (TextView) findViewById(R.id.note);
-
-
-
-
 
 
         buttonReadContact.setOnClickListener(new OnClickListener() {
@@ -109,7 +103,6 @@ public class ReadContact extends Activity {
                     String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
 
-
                     //Kontaktbild auslesen
 
 
@@ -119,10 +112,9 @@ public class ReadContact extends Activity {
 //                   contactphoto.setImageBitmap(contactphoto1);
 
 
-                    ImageView contactphoto= (ImageView)findViewById(R.id.friend);
+                    ImageView contactphoto = (ImageView) findViewById(R.id.friend);
 
                     //ImageView contactphoto2=(ImageView)findViewById(R.id.imageView3);
-
 
 
                     Bitmap contactphoto1 = BitmapFactory.decodeStream(openPhoto(longcontactID));
@@ -154,10 +146,6 @@ public class ReadContact extends Activity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
-
-
-
 
 
                     int columnIndex_HASPHONENUMBER = cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER);
@@ -227,7 +215,6 @@ public class ReadContact extends Activity {
 //
 
 
-
                         //Adresse auslesen
 
                         String addrWhere = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
@@ -256,9 +243,9 @@ public class ReadContact extends Activity {
                             textPostBox.setText(poBox);
 
                             textStreet.setText(street);
-                                    textcity.setText(city);
+                            textcity.setText(city);
                             textstate.setText(state);
-                                    textpostalCode.setText(postalCode);
+                            textpostalCode.setText(postalCode);
                             textpostalCountry.setText(country);
 
                         }
@@ -274,7 +261,6 @@ public class ReadContact extends Activity {
             }
         }
     }
-
 
 
     //Kontaktphoto auslesen Klasse
@@ -322,7 +308,6 @@ public class ReadContact extends Activity {
         }
         return null;
     }
-
 
 
 }
