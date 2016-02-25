@@ -81,6 +81,10 @@ public class newdoorsignActivity extends Activity {
     private EditText newdoorsign_roomnumber;
     private EditText newdoorsign_telephonenumber;
     private EditText newdoorsign_emailadress;
+    private EditText newdoorsign_status;
+    private EditText newdoorsign_roll;
+    private EditText newdoorsign_times;
+    private EditText newdoorsign_information;
 
     //////////////////////////////////////kopiert
     private static final int SELECT_PICTURE = 1;
@@ -88,31 +92,29 @@ public class newdoorsignActivity extends Activity {
     private Button btnClose;
     private Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
     private ImageView imageView;
-    private TypedValue displaywidthTV = new TypedValue();
-    private TypedValue displayheightTV = new TypedValue();
-//////////////////////////////////////kopiert
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newdoorsign);
+
+
         newdoorsign_name = (EditText) findViewById(R.id.editText2);
         newdoorsign_roomnumber = (EditText) findViewById(R.id.editText3);
         newdoorsign_telephonenumber = (EditText) findViewById(R.id.editText4);
         newdoorsign_emailadress = (EditText) findViewById(R.id.editText5);
+        newdoorsign_times = (EditText) findViewById(R.id.editText6);
+        newdoorsign_roll = (EditText) findViewById(R.id.editText7);
 
-        //////////////////////////////////////kopiert
+        newdoorsign_status = (EditText) findViewById(R.id.editText8);
+
+
+        newdoorsign_information = (EditText) findViewById(R.id.editText9);
+
 
         final Dialog nagDialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
         enterbutton = (ImageButton) findViewById(R.id.enterbutton);
-
-
-        getResources().getValue(R.dimen.display_width, displaywidthTV, true);
-        final float displaywidth = displaywidthTV.getFloat();
-        getResources().getValue(R.dimen.display_height, displayheightTV, true);
-        final float displayheight = displayheightTV.getFloat();
-
-        ////////////////////////////////////     kopiert ende
-
 
 
 
@@ -134,7 +136,17 @@ public class newdoorsignActivity extends Activity {
         final String emailadressfinal  = app_preferences.getString("emailadress", "...");
         newdoorsign_emailadress.setText(emailadressfinal);
 
+        final String statusfinal  = app_preferences.getString("status", "...");
+        newdoorsign_status.setText(statusfinal);
 
+        final String roll  = app_preferences.getString("roll", "...");
+        newdoorsign_roll.setText(roll);
+
+        final String times  = app_preferences.getString("times", "...");
+        newdoorsign_times.setText(times);
+
+        final String informationfinal  = app_preferences.getString("information", "...");
+        newdoorsign_information.setText(informationfinal);
 
 
 
@@ -153,114 +165,29 @@ public class newdoorsignActivity extends Activity {
                                                     SP_name.commit();
 
 
+                                                    SharedPreferences.Editor SP_status = app_preferences.edit();
+                                                    SP_status.putString("status", newdoorsign_status.getText().toString());
+                                                    SP_status.commit();
+
+
+                                                    SharedPreferences.Editor SP_roll = app_preferences.edit();
+                                                    SP_roll.putString("roll", newdoorsign_roll.getText().toString());
+                                                    SP_roll.commit();
+
+                                                    SharedPreferences.Editor SP_times = app_preferences.edit();
+                                                    SP_times.putString("times", newdoorsign_times.getText().toString());
+                                                    SP_times.commit();
+
+                                                    SharedPreferences.Editor SP_information = app_preferences.edit();
+                                                    SP_information.putString("information", newdoorsign_information.getText().toString());
+                                                    SP_information.commit();
 
 
 
 
 
-                                                    Bitmap.Config conf = Bitmap.Config.ARGB_4444;
-                                                    Bitmap alteredBitmap = Bitmap.createBitmap(Math.round(displaywidth), Math.round(displayheight), conf);
-
-                                                    float horizontalline1 = 50;
-                                                    float horizontalline2 = 100;     // hier wird Rechteck drauf bezogen
-
-                                                    float rechteckbreite = 250;
 
 
-
-                                                    Paint drawline = new Paint();
-                                                    drawline.setColor(Color.BLACK);
-                                                    drawline.setStrokeWidth(10);
-
-
-                                                    int textroomnumberheight = 80;
-                                                    Paint textroomnumber = new Paint();
-                                                    textroomnumber.setColor(Color.WHITE);
-                                                    textroomnumber.setTextSize(textroomnumberheight);
-
-
-                                                    int textnameheight = 30;
-                                                    Paint textname = new Paint();
-                                                    textname.setColor(Color.BLACK);
-                                                    textname.setTextSize(textnameheight);
-                                                    Canvas canvas = new Canvas(alteredBitmap);
-
-
-                                                    //    public void drawLine(float startX, float startY, float stopX, float stopY,
-
-                                                    canvas.drawLine(0, horizontalline1, displaywidth - rechteckbreite, horizontalline1, drawline);
-                                                    canvas.drawLine(0, horizontalline2, displaywidth, horizontalline2, drawline);
-
-
-                                                    //Kasten aussen rum
-                                                    canvas.drawLine(0, displayheight, displaywidth, displayheight, drawline);
-                                                    canvas.drawLine(0, 0, displaywidth, 0, drawline);
-                                                    canvas.drawLine(displaywidth, 0, displaywidth, displayheight, drawline);
-                                                    canvas.drawLine(0, 0, 0, displayheight, drawline);
-
-                                                    // public void drawRect(float left, float top, float right, float bottom, @NonNull Paint paint)
-
-                                                    canvas.drawRect(displaywidth - rechteckbreite, 0, displaywidth, horizontalline2, drawline);
-                                                    canvas.drawText(roomnumberfinal, displaywidth - rechteckbreite + 10, horizontalline2 - (horizontalline2 - textroomnumberheight) / 2, textroomnumber);
-                                                    canvas.drawText(namefinal, 10, horizontalline1 - (horizontalline1 - textnameheight) / 2, textname);
-                                                    canvas.drawText(telephnoenumberfinal, 10, horizontalline2- ((horizontalline2 - horizontalline1 - textnameheight) / 2), textname);
-
-
-
-                                                    String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() +
-                                                            "/Doorsign";
-                                                    File dir = new File(file_path);
-
-                                                    if (!dir.exists())
-                                                        dir.mkdirs();
-
-                                                    File file = new File(dir, "doorsign1.PNG");
-
-                                                    FileOutputStream fOut = null;
-
-
-                                                    try {
-                                                        fOut = new FileOutputStream(file);
-                                                        alteredBitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-                                                        fOut.flush();
-                                                        fOut.close();
-                                                    } catch (Exception e) {
-                                                        e.printStackTrace();
-                                                    }
-
-                                                    //einlesen von Bild
-                                                    BitmapFactory.Options options = new BitmapFactory.Options();
-                                                    options.inPreferredConfig = Bitmap.Config.ARGB_4444;
-
-                                                    String inputfile = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Doorsign/doorsign1.PNG";
-                                                    Bitmap bitmap = BitmapFactory.decodeFile(inputfile, options);
-
-
-                                                    //DIalog anzeigen
-                                                    setContentView(R.layout.preview_image);
-                                                    nagDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                                                    nagDialog.setCancelable(false);
-                                                    nagDialog.setContentView(R.layout.preview_image);
-                                                    Button btnClose = (Button) nagDialog.findViewById(R.id.btnIvClose);
-                                                    ImageView ivPreview = (ImageView) nagDialog.findViewById(R.id.iv_preview_image);
-                                                    ivPreview.setImageBitmap(bitmap);
-
-
-
-                                                    nagDialog.show();
-
-                                                    btnClose.setOnClickListener(new View.OnClickListener() {
-                                                                                            @Override
-                                                                                            public void onClick(View v) {
-
-
-                                                                                                Intent i = new Intent(getApplicationContext(), newdoorsignActivity.class);
-                                                                                                startActivity(i);
-
-
-                                                                                            }
-                                                                                        }
-                                                    );
 
                                                 }
                                             }

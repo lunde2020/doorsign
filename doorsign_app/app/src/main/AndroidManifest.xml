@@ -27,6 +27,9 @@
 
         <activity android:name=".Start"></activity>
 
+        <activity android:name=".newconfigActivity"></activity>
+
+
         <activity android:name=".ReadContact"></activity>
 
         <activity
@@ -48,6 +51,10 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
 
 
 </manifest>
