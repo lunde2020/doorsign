@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doorsignstore>
+	<template category="REAL">
+				<id>0</id>
+				<tag1_x>450</tag1_x>
+				<tag1_y>320</tag1_y>
+				<tag1_text_font>./fonts/BRUSHSCI.TTF</tag1_text_font>
+				<tag1_text_height>26</tag1_text_height>
+				<tag1_text_wrap>20</tag1_text_wrap>	
+	</template>	
+	<template category="REAL">
+				<id>1</id>
+				<tag1_x>427</tag1_x>
+				<tag1_y>358</tag1_y>
+				<tag1_text_font>./fonts/BRUSHSCI.TTF</tag1_text_font>
+				<tag1_text_height>36</tag1_text_height>
+				<tag1_text_wrap>17</tag1_text_wrap>	
+	</template>	
+</doorsignstore>
+
+
+
+
+ 
+

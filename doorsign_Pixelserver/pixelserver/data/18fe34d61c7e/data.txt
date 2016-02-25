@@ -1,0 +1,1 @@
+{"mac":"18:fe:34:d6:1c:7e","pin":"1234","name":"Steve O.","roomnumber":"...","telephonenumber":" 49 721 60901861","emailadress":"StefanS.1989@googlemail.com","status":"Was geht den da ab alter","roll":"Studiendekanin Mechatronik","information":"","times":"..."}
