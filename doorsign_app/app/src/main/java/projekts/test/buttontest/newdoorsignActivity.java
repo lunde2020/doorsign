@@ -16,9 +16,54 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+
+import android.app.Activity;
+import android.app.DownloadManager;
+import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.AssetFileDescriptor;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.preference.PreferenceManager;
+import android.provider.ContactsContract;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.Console;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,10 +77,10 @@ import java.io.FileOutputStream;
 
 public class newdoorsignActivity extends Activity {
 
-    private TextView newdoorsign_name;
-    private TextView newdoorsign_roomnumber;
-    private TextView newdoorsign_telephonenumber;
-    private TextView newdoorsign_emailadress;
+    private EditText newdoorsign_name;
+    private EditText newdoorsign_roomnumber;
+    private EditText newdoorsign_telephonenumber;
+    private EditText newdoorsign_emailadress;
 
     //////////////////////////////////////kopiert
     private static final int SELECT_PICTURE = 1;
@@ -50,10 +95,10 @@ public class newdoorsignActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newdoorsign);
-        newdoorsign_name = (TextView) findViewById(R.id.newdoorsign_name);
-        newdoorsign_roomnumber = (TextView) findViewById(R.id.newdoorsign_roomnumber);
-        newdoorsign_telephonenumber = (TextView) findViewById(R.id.newdoorsign_telephonenumber);
-        newdoorsign_emailadress = (TextView) findViewById(R.id.newdoorsign_emailadress);
+        newdoorsign_name = (EditText) findViewById(R.id.editText2);
+        newdoorsign_roomnumber = (EditText) findViewById(R.id.editText3);
+        newdoorsign_telephonenumber = (EditText) findViewById(R.id.editText4);
+        newdoorsign_emailadress = (EditText) findViewById(R.id.editText5);
 
         //////////////////////////////////////kopiert
 
@@ -71,7 +116,7 @@ public class newdoorsignActivity extends Activity {
 
 
 
-        SharedPreferences app_preferences =
+        final SharedPreferences app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
 
 
@@ -89,9 +134,28 @@ public class newdoorsignActivity extends Activity {
         final String emailadressfinal  = app_preferences.getString("emailadress", "...");
         newdoorsign_emailadress.setText(emailadressfinal);
 
+
+
+
+
+
+
         enterbutton.setOnClickListener(new View.OnClickListener() {
                                                 @Override
                                                 public void onClick(View v) {
+
+
+
+
+
+                                                    SharedPreferences.Editor SP_name = app_preferences.edit();
+                                                    SP_name.putString("name", newdoorsign_name.getText().toString());
+                                                    SP_name.commit();
+
+
+
+
+
 
 
                                                     Bitmap.Config conf = Bitmap.Config.ARGB_4444;

@@ -10,6 +10,12 @@
         </style>
 
 
+    <style name="NoActionBar" parent="BaseTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
     <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/primary</item> 

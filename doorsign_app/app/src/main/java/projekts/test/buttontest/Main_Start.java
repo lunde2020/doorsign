@@ -71,6 +71,8 @@ public class Main_Start extends Activity {
         homescreen_name = (TextView) findViewById(R.id.homescreen_name);
         contactphoto = (ImageView) findViewById(R.id.imageView3);
 
+       // final send_all_data senddata;
+
 
         SharedPreferences app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
@@ -112,33 +114,40 @@ public class Main_Start extends Activity {
                                             @Override
                                             public void onClick(View v) {
 
-                                                Thread networkConnectionThread = new Thread(new Runnable() {
-                                                    @Override
-                                                    public void run() {
-                                                        try {
-                                                            //URL url = new URL("http://10.0.2.2/pixelserver/SaveConfig.php");
-                                                            URL url = new URL("http://192.168.178.81/pixelserver/SaveConfig.php");
-                                                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                                                            urlConnection.setRequestMethod("POST");
 
-                                                            OutputStreamWriter writer = new OutputStreamWriter(
-                                                                    urlConnection.getOutputStream());
 
-                                                            writer.write("json="+Main_Start.this.getConfig().toString());
-                                                            writer.close();
-                                                            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                                                                Log.d("URL-CONNECTION", "HTTP REQUEST OK!");
-                                                            } else {
-                                                                Log.d("URL-CONNECTION", "HTTP REQUEST ERROR!");
-                                                            }
-                                                        } catch (MalformedURLException e) {
-                                                            e.printStackTrace();
-                                                        } catch (IOException e) {
-                                                            e.printStackTrace();
-                                                        }
-                                                    }
-                                                });
-                                                networkConnectionThread.start();
+
+                                                //send_all_data send;
+
+
+
+//                                                Thread networkConnectionThread = new Thread(new Runnable() {
+//                                                    @Override
+//                                                    public void run() {
+//                                                        try {
+//                                                            URL url = new URL("http://10.0.2.2/pixelserver/SaveConfig.php");
+//                                                            //URL url = new URL("http://192.168.178.81/pixelserver/SaveConfig.php");
+//                                                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+//                                                            urlConnection.setRequestMethod("POST");
+//
+//                                                            OutputStreamWriter writer = new OutputStreamWriter(
+//                                                                    urlConnection.getOutputStream());
+//
+//                                                            writer.write("json="+Main_Start.this.getConfig().toString());
+//                                                            writer.close();
+//                                                            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+//                                                                Log.d("URL-CONNECTION", "HTTP REQUEST OK!");
+//                                                            } else {
+//                                                                Log.d("URL-CONNECTION", "HTTP REQUEST ERROR!");
+//                                                            }
+//                                                        } catch (MalformedURLException e) {
+//                                                            e.printStackTrace();
+//                                                        } catch (IOException e) {
+//                                                            e.printStackTrace();
+//                                                        }
+//                                                    }
+//                                                });
+//                                                networkConnectionThread.start();
 
 
                                             }
@@ -147,22 +156,22 @@ public class Main_Start extends Activity {
 
     }
 
-    private JSONObject getConfig() {
-        SharedPreferences app_preferences =
-                PreferenceManager.getDefaultSharedPreferences(this);
-        JSONObject configObject = new JSONObject();
-        try {
-            configObject.put("mac", app_preferences.getString("mac", "18:fe:34:d6:1c:7e"));
-            configObject.put("pin", app_preferences.getString("pin", "1234"));
-            configObject.put("name", app_preferences.getString("name", "..."));
-            configObject.put("roomnumber", app_preferences.getString("roomnumber", "..."));
-            configObject.put("telephonenumber", app_preferences.getString("telephonenumber", "..."));
-            configObject.put("emailadress", app_preferences.getString("emailadress", "..."));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return configObject;
-    }
+//    private JSONObject getConfig() {
+//        SharedPreferences app_preferences =
+//                PreferenceManager.getDefaultSharedPreferences(this);
+//        JSONObject configObject = new JSONObject();
+//        try {
+//            configObject.put("mac", app_preferences.getString("mac", "18:fe:34:d6:1c:7e"));
+//            configObject.put("pin", app_preferences.getString("pin", "1234"));
+//            configObject.put("name", app_preferences.getString("name", "..."));
+//            configObject.put("roomnumber", app_preferences.getString("roomnumber", "..."));
+//            configObject.put("telephonenumber", app_preferences.getString("telephonenumber", "..."));
+//            configObject.put("emailadress", app_preferences.getString("emailadress", "..."));
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//        return configObject;
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -317,6 +326,8 @@ public class Main_Start extends Activity {
                     SharedPreferences.Editor SP_name = app_preferences.edit();
                     SP_name.putString("name", name);
                     SP_name.commit();
+
+
                     homescreen_name.setText(name);
 
 

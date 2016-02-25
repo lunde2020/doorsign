@@ -8,7 +8,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreenActivity">
+
+
+        <activity
+
+            android:name=".SplashScreenActivity"
+            android:theme="@style/NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,7 +29,12 @@
 
         <activity android:name=".ReadContact"></activity>
 
-        <activity android:name=".newdoorsignActivity"></activity>
+        <activity
+            android:name=".newdoorsignActivity"
+            android:windowSoftInputMode="stateHidden">
+
+
+        </activity>
 
         <activity android:name=".IntroScreenActivity"></activity>
 
