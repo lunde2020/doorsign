@@ -1,0 +1,1 @@
+{"mac":"18:fe:34:d6:a2:61","pin":"1234","name":"Max Mustermann","roomnumber":"*-***","telephonenumber":"0721 925 - ****","emailadress":"max.mustermann@hs-karlsruhe.de","status":"Konfiguration","roll":"Musterer","information":"Türschild wurde erkannt, tragen Sie nun die MAC-Adresse in der App ein. Pin:1234","times":"...","template":"0","mode":"0"}

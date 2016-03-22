@@ -17,15 +17,15 @@
         android:clipChildren="false">
 
         <ImageView
-            android:id="@+id/img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/imageView4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:scaleType="centerInside"
-            android:src="@drawable/screensh"
+            android:src="@mipmap/ic_autorenew_white_48dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:gravity="center"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
     </FrameLayout>
 

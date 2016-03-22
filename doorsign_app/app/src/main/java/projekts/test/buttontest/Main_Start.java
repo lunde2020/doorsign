@@ -59,6 +59,7 @@ public class Main_Start extends Activity {
     private ImageButton imageButton;
     private ImageButton imageButton2;
     private ImageButton imageButton3;
+    private ImageButton imageButton4;
     private ImageButton imageButton6;
     private TextView homescreen_name;
     private ImageView contactphoto;
@@ -74,6 +75,7 @@ public class Main_Start extends Activity {
         imageButton2 = (ImageButton) findViewById(R.id.imageButton2);
         imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
         imageButton6 = (ImageButton) findViewById(R.id.imageButton6);
+        imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
         homescreen_name = (TextView) findViewById(R.id.homescreen_name);
         contactphoto = (ImageView) findViewById(R.id.imageView3);
 
@@ -114,6 +116,18 @@ public class Main_Start extends Activity {
                                                 final Uri uriContact = ContactsContract.Contacts.CONTENT_URI;
                                                 Intent intentPickContact = new Intent(Intent.ACTION_PICK, uriContact);
                                                 startActivityForResult(intentPickContact, RQS_PICKCONTACT);
+
+                                            }
+                                        }
+        );
+
+// FAQ
+        imageButton4.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                myVib.vibrate(50);
+                                                Intent i = new Intent(getApplicationContext(), faqActivity.class);
+                                                startActivity(i);
 
                                             }
                                         }
@@ -212,6 +226,11 @@ public class Main_Start extends Activity {
                                                             writer.close();
                                                             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                                                                 Log.d("URL-CONNECTION", "HTTP REQUEST OK!");
+
+                                                                SharedPreferences.Editor SP_delete = app_preferences.edit();
+                                                                SP_delete.putBoolean("delete", false);
+                                                                SP_delete.commit();
+
                                                                 myVib.vibrate(50);
                                                             } else {
                                                                 Log.d("URL-CONNECTION", "HTTP REQUEST ERROR!");
@@ -248,9 +267,9 @@ public class Main_Start extends Activity {
             configObject.put("roll", app_preferences.getString("roll", "..."));
             configObject.put("information", app_preferences.getString("information", "..."));
             configObject.put("times", app_preferences.getString("times", "..."));
-
             configObject.put("template", app_preferences.getString("template", "..."));
             configObject.put("mode", app_preferences.getString("mode", "..."));
+            configObject.put("delete", app_preferences.getBoolean("delete", false));
 
 
 

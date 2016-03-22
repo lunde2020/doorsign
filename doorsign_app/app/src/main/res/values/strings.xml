@@ -4,17 +4,45 @@
     <string name="action_settings">Settings</string>
 
     //Intro und Splash screen
-    <string name="screen1_title">Türschild aktualisieren</string>
+    <string name="screen1_title">Aktualisiere Türschild</string>
     <string name="screen1_desc">Hier kannst du dein eigenes Türschild erstellen und aktualisieren. Zuvor musst du jedoch einen Kontakt auswählen.</string>
-    <string name="screen2_title">Benutzer auswählen</string>
+    <string name="screen2_title">Neuer Benutzer</string>
     <string name="screen2_desc">Die Benutzer werden mit deinem Google-Konto synchronisiert. Wähle einfach aus!</string>
-    <string name="screen3_title">Türschild konfigurieren</string>
-    <string name="screen3_desc">Hier kannst du die Aktualisierungszeit, Verwendung eines WakeUp-Transmitters und viele andere Ding einrichten.</string>
+    <string name="screen3_title">Konfiguriere Türschild</string>
+    <string name="screen3_desc">Hier kannst du deinen Server einrichten und MAC-Adresse und PIN angeben.</string>
     <string name="screen4_title">FAQ</string>
-    <string name="screen4_desc">Hier werden all deine Fragen zur App beantwortet</string>
+    <string name="screen4_desc">Hier werden all deine Fragen zum Türschild beantwortet</string>
 
-    <string name="screen5_title">Bild testen</string>
-    <string name="screen5_desc">Um die App bessr erklären zu können auch mit Bildern</string>
+
+    <string name="screen5_title">Sende Daten</string>
+    <string name="screen5_desc">Bestätige hier, um die Daten an den Pixelserver zu senden.</string>
     <string name="splashtext">dooRsign</string>
+
+
+    <string name="faq1_q">Wie richte ich ein neues Türschild ein?</string>
+    <string name="faq1_a">(1) Beim ersten Anschalten eines neuen Türschilds wird der Konfigurationsmodus gestartet. Folgen Sie den Anweisungen auf dem Türschild. \n (2) Sind die Daten korrekt wird nach dem ersten einloggen am Pixelserver der Benutzer Max Mustermann angezeigt - die Verbindung wurde erkannt. \n (3) Unter Informationen entnehmen Sie nun die MAC-Adresse und den automatisch generierten PIN des Türschild. \n (4) Tragen Sie diese Werte in "Konfiguriere Türschild" ein. \n (5) Die IP-Adresse des Pixelservers lautet 192.168.44.1. </string>
+
+    <string name="faq2_q">Wie ändere ich die PIN?</string>
+    <string name="faq2_a">Eine PIN-Änderung wurde noch nicht implementiert. Es kann jedoch über  </string>
+
+
+    <string name="faq3_q">dooRsign</string>
+    <string name="faq3_a">dooRsign</string>
+
+
+    <string name="faq4_q">dooRsign</string>
+    <string name="faq4_a">dooRsign</string>
+
+
+    <string name="faq5_q">dooRsign</string>
+    <string name="faq5_a">dooRsign</string>
+
+
+    <string name="faq6_q">dooRsign</string>
+    <string name="faq6_a">dooRsign</string>
+
+
+    <string name="faq7_q">dooRsign</string>
+    <string name="faq7_a">dooRsign</string>
 
 </resources>

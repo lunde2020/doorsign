@@ -41,25 +41,70 @@ foreach (getallheaders() as $name => $value)
 	
 $foldername = str_replace(':','',$xmac);
 $path = "./data/" . $foldername;
+$file = $path . "/data.txt";
+
+if (!file_exists($path)){
+	mkdir($path, 0777, true);
+	
+	copy("./data/000000000000/data.txt", "$path/data.txt");
+	copy("./data/000000000000/pinapp.txt", "$path/pinapp.txt");
+	
+	
+		$string = file_get_contents($file);	
+		$configContentJsonObject = json_decode($string);
+		
+		$pinlength = 4;
+		$charSet = '123456789'; 
+		$pin = '';
+		for($a = 0; $a < $pinlength; $a++) $pin .= $charSet[rand(0, strlen($charSet))];
+		
+		$pinsha1= sha1($pin);
+		$filepinapp = $path . "/pinapp.txt";	
+		$fp = fopen($filepinapp, 'w');
+		fwrite($fp, $pinsha1); 
+		fclose($fp);
+		
+
+		$information="Türschild wurde erkannt, tragen Sie nun in der App ein Pin:".$pin ."\n MAC-Adresse:" .$xmac;
+	
+		
+		$configContentJsonObject->{'pin'} = $pin;
+		$configContentJsonObject->{'information'} = $information;
+		$newJsonString = json_encode($configContentJsonObject);
+		file_put_contents($file, $newJsonString);
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //save data to specific mac adress
 $voltagedatacsv = $path . "/voltage.csv";	
 	
 	
-if ($xbatterymv>2000 && $xbatterymv<5000)			// falls von localhost zugegriffen wird -> keine Batterispannung
+if ($xbatterymv>2000 && $xbatterymv<5000)			// falls von localhost zugegriffen wird -> keine Batterispannung wird eingetragen
 	
 {
 		$line=array (date("r"), $xbatterymv);
 		$handle = fopen($voltagedatacsv, "a");		// Then add your line (fputcsv­Docs):
 		fputcsv($handle, $line); 					// $line is an array of string values here
 		fclose($handle);							//Then close the handle (fclose­Docs):
-  }
+}
  
-//$voltagedatacsv="data/voltage.csv";
 require_once('libs/csv_in_array.php');
 $csvdata = csv_in_array($voltagedatacsv, ",", "\"", FALSE ); 
 $i_max=count($csvdata);
 $steps=$i_max/1200;
 $steps=ceil($steps);
+
 
 if ($steps<1)
 {

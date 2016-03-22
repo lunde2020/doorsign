@@ -25,18 +25,18 @@ $contact	=0;		//choose contact
 						//0 --> Beck
 						//1 --> Artinger
 						//2 --> Burghart
-$modus		=0;		//choose mode
+$modus		=1;		//choose mode
 						//0 --> template mode (normal mode)
 						//1 --> show voltage mode
 						
-$template	=1;		//choose template
+$template	=0;		//choose template
 						//0 --> thick notes picture
 						//1 --> thin notes picture
 $debug		=0;		// DEBUG option			
 						// 0->"DisplayMode"		==>	choose this for operation mode!			
 						// 1->"Picture-Debug" 	==>	show picture in Browser 						
 						// 2->"PHP-Debug"		==>	show debug comments -> empty page no errors	
-$refresh 	=0;		// Refresh time in sec
+$refresh 	=60;		// Refresh time in sec
 						// 0->"NoWakeUp"		==> choose this for only wake up by reset
 						// 3600->"1Hour"		==> wakeup each hour			
 $php_header	=0;		// show PHP-Header -> in eigenen modus machen (zeigt Mac-Adresse von Türschild an)			
@@ -122,14 +122,14 @@ $name_text 			= $configContentJsonObject->{'name'};
 $room_text 			= $configContentJsonObject->{'roomnumber'};
 $tel_text 			= $configContentJsonObject->{'telephonenumber'};
 $email_text 		= $configContentJsonObject->{'emailadress'};
-
-
-
 $roll_text 			= $configContentJsonObject->{'roll'};
 $times_text 		= $configContentJsonObject->{'times'};
 $status_text 		= $configContentJsonObject->{'status'};
 $information_text 	= $configContentJsonObject->{'information'};
+$template			= intval($configContentJsonObject->{'template'});		//choose template
 
+
+$modus				= intval($configContentJsonObject->{'mode'});		//choose template
 
 
 			

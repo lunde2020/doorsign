@@ -14,7 +14,15 @@
 				<tag1_y>358</tag1_y>
 				<tag1_text_font>./fonts/BRUSHSCI.TTF</tag1_text_font>
 				<tag1_text_height>36</tag1_text_height>
-				<tag1_text_wrap>17</tag1_text_wrap>	
+				<tag1_text_wrap>15</tag1_text_wrap>	
+	</template>	
+<template category="REAL">
+				<id>2</id>
+				<tag1_x>427</tag1_x>
+				<tag1_y>358</tag1_y>
+				<tag1_text_font>./fonts/BRUSHSCI.TTF</tag1_text_font>
+				<tag1_text_height>36</tag1_text_height>
+				<tag1_text_wrap>15</tag1_text_wrap>	
 	</template>	
 </doorsignstore>
 

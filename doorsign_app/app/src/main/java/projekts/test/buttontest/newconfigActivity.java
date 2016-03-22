@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.io.File;
@@ -40,7 +41,8 @@ public class newconfigActivity extends Activity {
     private TextView newconfig_URL;
     private EditText newconfig_mode;
     private EditText newconfig_template;
-
+    private Switch newconfig_intro;
+    private Switch newconfig_delete;
 
     private Vibrator myVib;
 
@@ -61,7 +63,8 @@ public class newconfigActivity extends Activity {
 
         newconfig_mode = (EditText) findViewById(R.id.editText11);
         newconfig_template = (EditText) findViewById(R.id.editText10);
-
+        newconfig_intro =(Switch) findViewById(R.id.switch13);
+        newconfig_delete =(Switch) findViewById(R.id.switch4);
 
         //final Dialog nagDialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
         enterbuttonconfig = (ImageButton) findViewById(R.id.enterbuttonconfig);
@@ -89,10 +92,8 @@ public class newconfigActivity extends Activity {
         final String macfinal  = app_preferences.getString("mac", "18:fe:34:d6:1c:7e");
         newconfig_mac.setText(macfinal);
 
-
-
-  final String URLfinal  = app_preferences.getString("URL", "...");
-   newconfig_URL.setText(URLfinal);
+        final String URLfinal  = app_preferences.getString("URL", "...");
+        newconfig_URL.setText(URLfinal);
 
         final String templatefinal  = app_preferences.getString("template", "0");
         newconfig_template.setText(templatefinal);
@@ -100,8 +101,13 @@ public class newconfigActivity extends Activity {
         final String modefinal  = app_preferences.getString("mode", "0");
         newconfig_mode.setText(modefinal);
 
+        final boolean introscreeen  = app_preferences.getBoolean ("intro", true);
+        newconfig_intro.setChecked(introscreeen);
 
 
+
+        final boolean delete  = app_preferences.getBoolean ("delete", false);
+        newconfig_delete.setChecked(delete);
 
 
 
@@ -127,13 +133,23 @@ public class newconfigActivity extends Activity {
                                                     SP_mac.putString("mac", newconfig_mac.getText().toString());
                                                     SP_mac.commit();
 
-                                                  SharedPreferences.Editor SP_template = app_preferences.edit();
-                                                   SP_template.putString("template", newconfig_template.getText().toString());
-                                                  SP_template.commit();
+                                                    SharedPreferences.Editor SP_template = app_preferences.edit();
+                                                    SP_template.putString("template", newconfig_template.getText().toString());
+                                                    SP_template.commit();
 
                                                     SharedPreferences.Editor SP_mode = app_preferences.edit();
                                                     SP_mode.putString("mode", newconfig_mode.getText().toString());
                                                     SP_mode.commit();
+
+                                                    SharedPreferences.Editor SP_intro = app_preferences.edit();
+                                                    SP_intro.putBoolean("intro", newconfig_intro.isChecked());
+                                                    SP_intro.commit();
+
+
+                                                    SharedPreferences.Editor SP_delete = app_preferences.edit();
+                                                    SP_delete.putBoolean("delete", newconfig_delete.isChecked());
+                                                    SP_delete.commit();
+
 
                                                     Intent i = new Intent(getApplicationContext(), Main_Start.class);
                                                     startActivity(i);

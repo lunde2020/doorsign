@@ -365,9 +365,8 @@
                         android:text="..."
                         android:id="@+id/editText9"
                         android:layout_weight="0.9" />
-
-
                 </LinearLayout>
+
 
             </LinearLayout>
         </ScrollView>

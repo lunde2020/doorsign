@@ -7,8 +7,10 @@ package projekts.test.buttontest;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -35,10 +37,25 @@ public class IntroScreenActivity extends AppCompatActivity{
     PagerAdapter pagerAdapter;
     LinearLayout circles;
     boolean isOpaque = true;
+	boolean temp = true;
+	boolean temp2 = true;
+
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+
+
+		final SharedPreferences app_preferences =
+				PreferenceManager.getDefaultSharedPreferences(this);
+		// Get String from Shared Preferences
+		final boolean introscreeen  = app_preferences.getBoolean ("intro", temp);
+		if (!introscreeen)
+		{endIntroduction();}
+
+
+
+		super.onCreate(savedInstanceState);
         
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
