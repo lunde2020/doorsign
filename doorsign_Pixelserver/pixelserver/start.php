@@ -5,7 +5,7 @@ header("Location: http://lundeallin/pixelserver/pixelserver.php");
  ##################  Hier wird der Spannungsverlauf aufgenommen und gespeichert
  
  
- 
+ //ersionierung
 
  /* pChart library inclusions */ 
  include("libs/pChart2.1.4/class/pData.class.php"); 
