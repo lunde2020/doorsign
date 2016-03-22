@@ -1,520 +1,427 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+    android:weightSum="1">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        android:background="#989898" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/UiTestTextView"
-            android:text="Aktualisiere Türschild"
-            android:layout_marginLeft="10dp"
-            android:id="@+id/textView13"
-            android:background="@android:color/transparent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:background="#979797" >
-
-        <ImageView
-            android:layout_width="88dp"
-            android:layout_height="83dp"
-            android:id="@+id/imageView4"
-            android:src="@drawable/ic_content_copy_white_48dp"
-            android:layout_marginStart="20dp" />
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_height="match_parent"
-            android:gravity="center" >
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="#989898" >
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/UiTestTextView"
+                android:text="Aktualisiere Türschild"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/textView6"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:background="#979797" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:src="@drawable/ic_content_copy_white_48dp"
+                android:layout_marginStart="20dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="...wählen Sie Daten aus "
-                android:layout_gravity="center_vertical"
-                android:id="@+id/textView14" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="         (Schalter ein = angezeigen)"
-                android:layout_gravity="center_vertical"
-                android:id="@+id/textView15" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-
-        android:background="#0fb0ef"
-        android:layout_marginTop="10dp"        >
-
-        <TextView
-
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/UiTestTextView"
-            android:text="Benutzerdaten aus Kontakt"
-
-            android:id="@+id/textView12"
-            android:background="@android:color/transparent" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="195dp"
-        android:id="@+id/scrollView"
-        android:background="#0fb0ef">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent">
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Name:"
-                android:id="@+id/textView10" />
-
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent">
-
-            <TextView
-                android:layout_width="0dp"
+                android:layout_marginLeft="30dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/newdoorsign_name"
-                android:layout_weight="0.9"/>
+                android:gravity="center" >
 
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch4"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/UiTestTextView10"
+                    android:text="...wählen Sie Daten aus "
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView18" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/UiTestTextView10"
+                    android:text="         (Schalter ein = angezeigen)"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView20" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Telefonnummer:"
-                android:id="@+id/textView17" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/newdoorsign_telephonenumber"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch5"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="E-Mail Adresse:"
-                android:id="@+id/newdoorsign_emailadress_text" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/newdoorsign_emailadress"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch6"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Raumnummer:"
-                android:id="@+id/textView21" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/newdoorsign_roomnumber"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch7"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Sprechzeiten:"
-                android:id="@+id/textView23" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/textView24"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch8"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Position:"
-                android:id="@+id/textView25" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/textView26"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch9"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Position:"
-                android:id="@+id/textView27" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/textView28"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch10"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Position:"
-                android:id="@+id/textView29" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/textView30"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch11"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Position:"
-                android:id="@+id/textView31" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:textAppearance="@style/UiTestTextView10"
-                android:text="..."
-                android:id="@+id/textView32"
-                android:layout_weight="0.9" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch12"
-                android:checked="true"
-                android:layout_gravity="right"
-                android:layout_marginRight="10dp" />
-        </LinearLayout>
-    </LinearLayout>
-
-
-    </ScrollView>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="#e1732a" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/UiTestTextView"
-            android:text="Synchronisation"
-            android:layout_marginLeft="10dp"
-            android:id="@+id/textView33"
-            android:background="@android:color/transparent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_gravity="center_horizontal"
-        android:background="#e1732a" >
-
-        <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/transparent" >
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/enterbutton"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_autorenew_white_48dp"
-                android:layout_weight="1.0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" >
+            android:background="#0fb0ef"
+            android:layout_marginTop="5dp" >
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/UiTestTextView18"
-                android:text="Türschild aktualisieren"
-                android:layout_weight="1.0"
-                android:textAlignment="center"
-                android:layout_marginTop="8dp"
-                android:id="@+id/textView19" />
+                android:textAppearance="@style/UiTestTextView"
+                android:text="Benutzerdaten aus Kontakt"
+                android:id="@+id/textView22"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:id="@+id/scrollView2"
+            android:background="#0fb0ef"
+            android:layout_weight="0.55" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Name:"
+                        android:id="@+id/textView34" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText2"
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Telefonnummer:"
+                        android:id="@+id/textView35" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText3"
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="E-Mail Adresse:"
+                        android:id="@+id/textView36" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText4"
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Raumnummer:"
+                        android:id="@+id/textView37" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText5"
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Sprechzeiten:"
+                        android:id="@+id/textView38" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText6"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Position:"
+                        android:id="@+id/textView39" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText7"
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Status:"
+                        android:id="@+id/textView12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText8"
+                        android:layout_weight="0.9" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Informationen:"
+                        android:id="@+id/textView13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:text="..."
+                        android:id="@+id/editText9"
+                        android:layout_weight="0.9" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#e1732a"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enterbutton"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/onclick_saveconfig"
+                    android:layout_marginLeft="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="Speichern"
+                        android:layout_weight="1.0"
+                        android:textAlignment="center"
+                        android:id="@+id/textView19"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

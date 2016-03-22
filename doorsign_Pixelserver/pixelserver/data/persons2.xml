@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doorsignstore>
+	<person category="REAL">
+				<id>0</id>
+				<mac>18:fe:34:d6:1c:7d</mac>
+				<name>Dipl.-Ing.(FH) Bernhard Beck</name>
+				<roll>Laborbetriebsleiter MMT</roll>
+				<room>F105</room>
+				<tel>Tel.: +49 (0) 721/925 - 1692</tel>
+				<email>bernhard.beck@hs-karlsruhe.de</email>
+				<times>nur nach Vereinbarung</times>
+				<status>bin im Reinraum F-U07</status>
+				<information>Reinraum, Projektbetreuung, Platinenentwicklung</information>
+	</person>
+	<person category="REAL">
+				<id>1</id>
+				<mac>0</mac>
+				<name>Prof. Dr.-Ing. Frank Artinger</name>
+				<roll>Dekan der Fakultät Maschinenbau und Mechatronik</roll>
+				<room>M110</room>
+				<tel>Tel.: +49(0) 721/925 - 1916</tel>
+				<email>frank.artinger@hs-karlsruhe.de</email>
+				<times>nur nach Vereinbarung</times>
+				<status>momentan viel beschäftigt und so</status>
+				<information>Automatisierungstechnik, Software-Engineering, Technische Informatik</information>
+	</person>
+	<person category="REAL">
+				<id>2</id>
+				<mac>18:fe:34:d6:1c:7e</mac>
+				<name>Prof. Dr.-Ing. habil. Catherina Burghart</name>
+				<roll>Studiendekanin Mechatronik (Master)</roll>
+				<room>M012</room>
+				<tel>Tel.: +49(0) 721/925 - 1868</tel>
+				<email>catherina.burghart@hs-karlsruhe.de</email>
+				<times>Freitag, 10:00 - 11:00 Uhr und nach Vereinbarung</times>
+				<status>Vorlesung SWT fällt aus</status>
+				<information>Angewandte Mathematik, Informatik, Softwaretechnik</information>
+	</person>
+	
+	
+	
+	
+</doorsignstore>
+
+
+
+ 
+
