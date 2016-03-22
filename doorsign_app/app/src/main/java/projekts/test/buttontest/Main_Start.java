@@ -78,6 +78,7 @@ public class Main_Start extends Activity {
         imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
         homescreen_name = (TextView) findViewById(R.id.homescreen_name);
         contactphoto = (ImageView) findViewById(R.id.imageView3);
+        int x = 1;
 
        // final send_all_data senddata;
 
