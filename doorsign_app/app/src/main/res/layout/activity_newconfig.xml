@@ -60,17 +60,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/UiTestTextView10"
-                    android:text="...wählen Sie Daten aus "
+                    android:text="...tragen Sie die Daten ein"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/textView18" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/UiTestTextView10"
-                    android:text="         (Schalter ein = angezeigen)"
-                    android:layout_gravity="center_vertical"
-                    android:id="@+id/textView20" />
             </LinearLayout>
         </LinearLayout>
 
@@ -87,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/UiTestTextView"
-                android:text="Benutzerdaten aus Kontakt"
+                android:text="Türschild Konfiguration"
                 android:id="@+id/textView22"
                 android:background="@android:color/transparent" />
         </LinearLayout>
@@ -131,17 +124,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
+                        android:text="192.168.192.2"
                         android:id="@+id/editText2"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch13"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -155,8 +142,40 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/UiTestTextView18"
-                        android:text="PIN"
-                        android:id="@+id/textView35" />
+                        android:text="URL:"
+                        android:id="@+id/textView14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="@style/UiTestTextView10"
+                        android:id="@+id/TextView12"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:text="..." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/UiTestTextView18"
+                        android:text="PIN:"
+                        android:id="@+id/textView15" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -170,17 +189,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/editText3"
-                        android:layout_weight="0.9" />
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch14"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
+                        android:text="0000"
+                        android:id="@+id/editText13"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -211,15 +223,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="18:fe:34:d6:1c:7e"
                         android:id="@+id/editText4"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch15"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -233,7 +239,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/UiTestTextView18"
-                        android:text="URL:"
+                        android:text="Türschild Vorlage: (0 oder 1)"
                         android:id="@+id/textView37" />
                 </LinearLayout>
 
@@ -243,61 +249,34 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent" >
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/editText5"
-                        android:layout_weight="0.9" />
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch16"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" >
-
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/UiTestTextView18"
-                        android:text="Sprechzeiten:"
-                        android:id="@+id/textView38" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" >
-
                     <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/editText6"
-                        android:layout_weight="0.9" />
-
-                    <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/switch17"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editText10"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAppearance="@style/UiTestTextView10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" >
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -311,46 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/UiTestTextView18"
-                        android:text="Position:"
-                        android:id="@+id/textView39" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" >
-
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/editText7"
-                        android:layout_weight="0.9" />
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch18"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" >
-
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/UiTestTextView18"
-                        android:text="Position:"
+                        android:text="Modus: (nur 0 bisher)"
                         android:id="@+id/textView40" />
                 </LinearLayout>
 
@@ -358,24 +298,21 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" >
+                    android:background="@android:color/transparent"
+                    android:weightSum="1">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editText11"
                         android:layout_marginLeft="20dp"
-                        android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/textView41"
-                        android:layout_weight="0.9" />
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAppearance="@style/UiTestTextView10" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch19"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -384,13 +321,6 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent" >
 
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/UiTestTextView18"
-                        android:text="Position:"
-                        android:id="@+id/textView42" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -399,22 +329,6 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent" >
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/textView43"
-                        android:layout_weight="0.9" />
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch20"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -423,13 +337,6 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent" >
 
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/UiTestTextView18"
-                        android:text="Position:"
-                        android:id="@+id/textView44" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -438,22 +345,6 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent" >
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:textAppearance="@style/UiTestTextView10"
-                        android:text="..."
-                        android:id="@+id/textView45"
-                        android:layout_weight="0.9" />
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch21"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
@@ -486,7 +377,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/enterbuttonconfig"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_save_white_48dp"
+                    android:src="@drawable/onclick_saveconfig"
                     android:layout_marginLeft="20dp" />
 
                 <LinearLayout

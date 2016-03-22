@@ -133,15 +133,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText2"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch13"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -172,15 +166,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText3"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch14"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -211,15 +199,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText4"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch15"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -250,15 +232,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText5"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch16"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -289,15 +265,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText6"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch17"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -328,15 +298,9 @@
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText7"
-                        android:layout_weight="0.9" />
+                        android:layout_weight="0.9"
+                        android:layout_marginRight="20dp" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch18"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -364,18 +328,12 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:textAppearance="@style/UiTestTextView10"
                         android:text="..."
                         android:id="@+id/editText8"
                         android:layout_weight="0.9" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch4"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -408,13 +366,7 @@
                         android:id="@+id/editText9"
                         android:layout_weight="0.9" />
 
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/switch5"
-                        android:checked="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="10dp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -448,7 +400,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/enterbutton"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_save_white_48dp"
+                    android:src="@drawable/onclick_saveconfig"
                     android:layout_marginLeft="20dp" />
 
                 <LinearLayout

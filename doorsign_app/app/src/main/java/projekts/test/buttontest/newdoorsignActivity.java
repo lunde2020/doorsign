@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
 import android.view.View;
@@ -86,6 +87,8 @@ public class newdoorsignActivity extends Activity {
     private EditText newdoorsign_times;
     private EditText newdoorsign_information;
 
+    private Vibrator myVib;
+
     //////////////////////////////////////kopiert
     private static final int SELECT_PICTURE = 1;
     private ImageButton enterbutton;
@@ -101,17 +104,16 @@ public class newdoorsignActivity extends Activity {
 
 
         newdoorsign_name = (EditText) findViewById(R.id.editText2);
-        newdoorsign_roomnumber = (EditText) findViewById(R.id.editText3);
-        newdoorsign_telephonenumber = (EditText) findViewById(R.id.editText4);
-        newdoorsign_emailadress = (EditText) findViewById(R.id.editText5);
+        newdoorsign_roomnumber = (EditText) findViewById(R.id.editText5);
+        newdoorsign_telephonenumber = (EditText) findViewById(R.id.editText3);
+        newdoorsign_emailadress = (EditText) findViewById(R.id.editText4);
         newdoorsign_times = (EditText) findViewById(R.id.editText6);
         newdoorsign_roll = (EditText) findViewById(R.id.editText7);
-
         newdoorsign_status = (EditText) findViewById(R.id.editText8);
-
-
         newdoorsign_information = (EditText) findViewById(R.id.editText9);
 
+
+        myVib = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
 
         final Dialog nagDialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
         enterbutton = (ImageButton) findViewById(R.id.enterbutton);
@@ -158,25 +160,37 @@ public class newdoorsignActivity extends Activity {
 
 
 
+                                                    myVib.vibrate(50);
 
 
                                                     SharedPreferences.Editor SP_name = app_preferences.edit();
                                                     SP_name.putString("name", newdoorsign_name.getText().toString());
                                                     SP_name.commit();
 
+                                                    SharedPreferences.Editor SP_telephonenumber = app_preferences.edit();
+                                                    SP_telephonenumber.putString("telephonenumber", newdoorsign_telephonenumber.getText().toString());
+                                                    SP_telephonenumber.commit();
 
-                                                    SharedPreferences.Editor SP_status = app_preferences.edit();
-                                                    SP_status.putString("status", newdoorsign_status.getText().toString());
-                                                    SP_status.commit();
+                                                    SharedPreferences.Editor SP_emailadress = app_preferences.edit();
+                                                    SP_emailadress.putString("emailadress", newdoorsign_emailadress.getText().toString());
+                                                    SP_emailadress.commit();
 
+                                                    SharedPreferences.Editor SP_roomnumber = app_preferences.edit();
+                                                    SP_roomnumber.putString("roomnumber", newdoorsign_roomnumber.getText().toString());
+                                                    SP_roomnumber.commit();
+
+                                                    SharedPreferences.Editor SP_times = app_preferences.edit();
+                                                    SP_times.putString("times", newdoorsign_times.getText().toString());
+                                                    SP_times.commit();
 
                                                     SharedPreferences.Editor SP_roll = app_preferences.edit();
                                                     SP_roll.putString("roll", newdoorsign_roll.getText().toString());
                                                     SP_roll.commit();
 
-                                                    SharedPreferences.Editor SP_times = app_preferences.edit();
-                                                    SP_times.putString("times", newdoorsign_times.getText().toString());
-                                                    SP_times.commit();
+
+                                                    SharedPreferences.Editor SP_status = app_preferences.edit();
+                                                    SP_status.putString("status", newdoorsign_status.getText().toString());
+                                                    SP_status.commit();
 
                                                     SharedPreferences.Editor SP_information = app_preferences.edit();
                                                     SP_information.putString("information", newdoorsign_information.getText().toString());
@@ -185,6 +199,8 @@ public class newdoorsignActivity extends Activity {
 
 
 
+                                                    Intent i = new Intent(getApplicationContext(), Main_Start.class);
+                                                    startActivity(i);
 
 
 

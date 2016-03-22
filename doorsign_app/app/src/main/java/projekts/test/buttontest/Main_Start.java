@@ -14,6 +14,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
@@ -32,6 +33,7 @@ import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.Console;
 import java.io.File;
@@ -39,6 +41,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
@@ -60,6 +63,7 @@ public class Main_Start extends Activity {
     private TextView homescreen_name;
     private ImageView contactphoto;
     final int RQS_PICKCONTACT = 1;
+    private Vibrator myVib;
 
 
     @Override
@@ -90,9 +94,13 @@ public class Main_Start extends Activity {
         contactphoto.setImageBitmap(bitmap);
 
 
+        myVib = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
+
+
         imageButton.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
+                                               myVib.vibrate(50);
                                                Intent i = new Intent(getApplicationContext(), newdoorsignActivity.class);
                                                startActivity(i);
                                            }
@@ -102,7 +110,7 @@ public class Main_Start extends Activity {
         imageButton2.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View v) {
-
+                                                myVib.vibrate(50);
                                                 final Uri uriContact = ContactsContract.Contacts.CONTENT_URI;
                                                 Intent intentPickContact = new Intent(Intent.ACTION_PICK, uriContact);
                                                 startActivityForResult(intentPickContact, RQS_PICKCONTACT);
@@ -115,6 +123,45 @@ public class Main_Start extends Activity {
         imageButton3.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
+//                                               Thread networkConnectionThread = new Thread(new Runnable() {
+//                                                   @Override
+//                                                   public void run() {
+//                                                       try {
+//                                                           // URL url = new URL("http://10.0.2.2/pixelserver/SaveConfig.php");
+//
+//                                                           URL url = new URL("http://10.0.2.2/pixelserver/GetMacs.php");
+//                                                           HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+//                                                           urlConnection.setRequestMethod("GET");
+//
+//                                                           if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+//                                                               Log.d("URL-CONNECTION", "HTTP REQUEST OK!");
+//
+//                                                               InputStreamReader in = new InputStreamReader((InputStream) urlConnection.getContent());
+//                                                               BufferedReader buff = new BufferedReader(in);
+//
+//                                                               String content = "";
+//                                                               do {
+//                                                                   content += buff.readLine();
+//                                                               } while (content != null);
+//
+//                                                               Log.d("CONTENT", content);
+//                                                           } else {
+//                                                               Log.d("URL-CONNECTION", "HTTP REQUEST ERROR!");
+//                                                           }
+//
+//                                                           urlConnection.disconnect();
+//
+//                                                       } catch (MalformedURLException e) {
+//                                                           e.printStackTrace();
+//                                                       } catch (IOException e) {
+//                                                           e.printStackTrace();
+//                                                       }
+//                                                   }
+//                                               });
+//
+//                                               networkConnectionThread.start();
+                                               myVib.vibrate(50);
+
                                                Intent i = new Intent(getApplicationContext(), newconfigActivity.class);
                                                startActivity(i);
                                            }
@@ -138,7 +185,6 @@ public class Main_Start extends Activity {
 
                                                 // Get String from Shared Preferences
                                                 final String ipadress  = app_preferences.getString("ipadress", "...");
-
 
                                                 final String makeURL= ("http://"+ipadress+"/pixelserver/SaveConfig.php");
                                                 // "http://192.168.178.81/pixelserver/SaveConfig.php"
@@ -166,6 +212,7 @@ public class Main_Start extends Activity {
                                                             writer.close();
                                                             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                                                                 Log.d("URL-CONNECTION", "HTTP REQUEST OK!");
+                                                                myVib.vibrate(50);
                                                             } else {
                                                                 Log.d("URL-CONNECTION", "HTTP REQUEST ERROR!");
                                                             }
@@ -193,10 +240,6 @@ public class Main_Start extends Activity {
         try {
             configObject.put("mac", app_preferences.getString("mac", "18:fe:34:d6:1c:7e"));
             configObject.put("pin", app_preferences.getString("pin", "1234"));
-
-
-
-
             configObject.put("name", app_preferences.getString("name", "..."));
             configObject.put("roomnumber", app_preferences.getString("roomnumber", "..."));
             configObject.put("telephonenumber", app_preferences.getString("telephonenumber", "..."));
@@ -205,6 +248,9 @@ public class Main_Start extends Activity {
             configObject.put("roll", app_preferences.getString("roll", "..."));
             configObject.put("information", app_preferences.getString("information", "..."));
             configObject.put("times", app_preferences.getString("times", "..."));
+
+            configObject.put("template", app_preferences.getString("template", "..."));
+            configObject.put("mode", app_preferences.getString("mode", "..."));
 
 
 
@@ -251,12 +297,12 @@ public class Main_Start extends Activity {
                 //ImageView contactphoto2=(ImageView)findViewById(R.id.imageView3);
 
 
-//                    Bitmap contactphoto1 = BitmapFactory.decodeStream(openPhoto(longcontactID));
-//                    contactphoto.setImageBitmap(contactphoto1);
+                   Bitmap contactphoto1 = BitmapFactory.decodeStream(openPhoto(longcontactID));
+                    contactphoto.setImageBitmap(contactphoto1);
 
 
-                Bitmap contactphoto1 = BitmapFactory.decodeStream(openDisplayPhoto(longcontactID));
-                contactphoto.setImageBitmap(contactphoto1);
+   //             Bitmap contactphoto1 = BitmapFactory.decodeStream(openDisplayPhoto(longcontactID));
+     //           contactphoto.setImageBitmap(contactphoto1);
 
 
                 String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() +
@@ -321,7 +367,7 @@ public class Main_Start extends Activity {
                     }
                     cursorMail.close();
 
-                    String information = "";
+                    String tempinformation = "";
 
 
                     String noteWhere = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
@@ -330,9 +376,11 @@ public class Main_Start extends Activity {
                     Cursor noteCur = getContentResolver().query(ContactsContract.Data.CONTENT_URI, null, noteWhere, noteWhereParams, null);
                     if (noteCur.moveToFirst()) {
                         String stringNote = noteCur.getString(noteCur.getColumnIndex(ContactsContract.CommonDataKinds.Note.NOTE));
-                        information = stringNote;
+                        tempinformation = stringNote;
 
                     }
+
+
                     noteCur.close();
 
                     //Adresse auslesen
@@ -347,6 +395,9 @@ public class Main_Start extends Activity {
 
                     String roomnumber = "";
 
+                    String times = "";
+                    String roll = "";
+
                     while (cursorAdress.moveToNext()) {
                         String poBox = cursorAdress.getString(
                                 cursorAdress.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POBOX));
@@ -355,6 +406,7 @@ public class Main_Start extends Activity {
 
                         String street = cursorAdress.getString(
                                 cursorAdress.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.STREET));
+                        times = street;
                         String city = cursorAdress.getString(
                                 cursorAdress.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.CITY));
                         String state = cursorAdress.getString(
@@ -363,9 +415,10 @@ public class Main_Start extends Activity {
                                 cursorAdress.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE));
                         String country = cursorAdress.getString(
                                 cursorAdress.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY));
+
+                        roll = country;
                         String type = cursorAdress.getString(
                                 cursorAdress.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.TYPE));
-
 
                     }
                     cursorAdress.close();
@@ -381,10 +434,50 @@ public class Main_Start extends Activity {
                     homescreen_name.setText(name);
 
 
+//                    String roll = "";
+//                    String times = "";
+//                    String information = "";
+//
+//                    int index_roll = tempinformation.indexOf("#roll=");
+//                    int index_times = tempinformation.indexOf("#times=");
+//                    int index_information = tempinformation.indexOf("#information=");
+//
+//
+//                    if (index_roll >= 0)
+//                            {
+//                                int index_roll_s = index_roll + "#roll=".length();
+//                                roll = tempinformation.substring(index_roll_s, index_times);
+//                            }
+//                    else
+//                            {
+//                                roll = "nicht angegeben";
+//                            }
+//
+//                    if (index_times >= 0)
+//                    {
+//                        int index_times_s = index_times + "#times=".length();
+//                        times = tempinformation.substring(index_times_s, index_information);
+//                    }
+//                    else
+//                    {
+//                        times = "nicht angegeben";
+//                    }
+//
+//                    if (index_information >= 0)
+//                    {
+//                        int index_information_s = index_information + "#information=".length();
+//                        information = tempinformation.substring(index_information_s, tempinformation.length());
+//                    }
+//                    else
+//                    {
+//                        information = "nicht angegeben";
+//                    }
+//
+//
 
 
                     SharedPreferences.Editor SP_information = app_preferences.edit();
-                    SP_information.putString("information", information);
+                    SP_information.putString("information", tempinformation);
                     SP_information.commit();
 
                     SharedPreferences.Editor SP_raumnummer = app_preferences.edit();
@@ -399,6 +492,20 @@ public class Main_Start extends Activity {
                     SharedPreferences.Editor SP_emailadress = app_preferences.edit();
                     SP_name.putString("emailadress", emailadress);
                     SP_name.commit();
+
+                    SharedPreferences.Editor SP_times = app_preferences.edit();
+                    SP_times.putString("times", times);
+                    SP_times.commit();
+
+                    SharedPreferences.Editor SP_roll = app_preferences.edit();
+                    SP_roll.putString("roll", roll);
+                    SP_roll.commit();
+
+
+                    SharedPreferences.Editor SP_status = app_preferences.edit();
+                    SP_status.putString("status", "Status / Notiz");
+                    SP_status.commit();
+
 
 
                 } else {

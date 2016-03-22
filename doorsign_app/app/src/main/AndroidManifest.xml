@@ -27,7 +27,10 @@
 
         <activity android:name=".Start"></activity>
 
-        <activity android:name=".newconfigActivity"></activity>
+        <activity
+            android:name=".newconfigActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
 
 
         <activity android:name=".ReadContact"></activity>
@@ -48,11 +51,11 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
 
 

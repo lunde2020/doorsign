@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
 import android.view.View;
@@ -37,10 +38,11 @@ public class newconfigActivity extends Activity {
     private EditText newconfig_pin;
     private EditText newconfig_mac;
     private TextView newconfig_URL;
+    private EditText newconfig_mode;
+    private EditText newconfig_template;
 
 
-
-
+    private Vibrator myVib;
 
     private ImageButton enterbuttonconfig;
 
@@ -53,9 +55,12 @@ public class newconfigActivity extends Activity {
 
 
         newconfig_ipadress = (EditText) findViewById(R.id.editText2);
-        newconfig_pin = (EditText) findViewById(R.id.editText3);
+        newconfig_pin = (EditText) findViewById(R.id.editText13);
         newconfig_mac = (EditText) findViewById(R.id.editText4);
-        newconfig_URL = (TextView) findViewById(R.id.editText5);
+        newconfig_URL = (TextView) findViewById(R.id.TextView12);
+
+        newconfig_mode = (EditText) findViewById(R.id.editText11);
+        newconfig_template = (EditText) findViewById(R.id.editText10);
 
 
         //final Dialog nagDialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
@@ -65,12 +70,14 @@ public class newconfigActivity extends Activity {
 
 
 
+        myVib = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
+
 
 
         final SharedPreferences app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
 
-        final String ipadressfinal  = app_preferences.getString("ipadress", "10.0.2.2");
+        final String ipadressfinal  = app_preferences.getString("ipadress", "192.168.1.2");
         newconfig_ipadress.setText(ipadressfinal);
 
 
@@ -82,9 +89,16 @@ public class newconfigActivity extends Activity {
         final String macfinal  = app_preferences.getString("mac", "18:fe:34:d6:1c:7e");
         newconfig_mac.setText(macfinal);
 
-        final String URLfinal  = app_preferences.getString("URL", "");
-        newconfig_URL.setText(URLfinal);
 
+
+  final String URLfinal  = app_preferences.getString("URL", "...");
+   newconfig_URL.setText(URLfinal);
+
+        final String templatefinal  = app_preferences.getString("template", "0");
+        newconfig_template.setText(templatefinal);
+
+        final String modefinal  = app_preferences.getString("mode", "0");
+        newconfig_mode.setText(modefinal);
 
 
 
@@ -98,6 +112,7 @@ public class newconfigActivity extends Activity {
 
 
 
+                                                    myVib.vibrate(50);
 
                                                     SharedPreferences.Editor SP_ipadress = app_preferences.edit();
                                                     SP_ipadress.putString("ipadress", newconfig_ipadress.getText().toString());
@@ -112,7 +127,16 @@ public class newconfigActivity extends Activity {
                                                     SP_mac.putString("mac", newconfig_mac.getText().toString());
                                                     SP_mac.commit();
 
+                                                  SharedPreferences.Editor SP_template = app_preferences.edit();
+                                                   SP_template.putString("template", newconfig_template.getText().toString());
+                                                  SP_template.commit();
 
+                                                    SharedPreferences.Editor SP_mode = app_preferences.edit();
+                                                    SP_mode.putString("mode", newconfig_mode.getText().toString());
+                                                    SP_mode.commit();
+
+                                                    Intent i = new Intent(getApplicationContext(), Main_Start.class);
+                                                    startActivity(i);
 
 
                                                 }

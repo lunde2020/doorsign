@@ -17,10 +17,7 @@ $file = $path . "/data.txt";
 $pin = $configContentJsonObject->{'pin'};
 $pinsha1= sha1($pin);
 
-// $filepinok = $path . "/pinapp_start.txt";	
-		// $fp = fopen($filepinok, 'w');
-		// fwrite($fp, $pinsha1); 
-		// fclose($fp);
+
 
 
 $filepinapp = $path . "/pinapp.txt";
