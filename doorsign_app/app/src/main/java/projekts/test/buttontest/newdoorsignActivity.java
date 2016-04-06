@@ -125,7 +125,7 @@ public class newdoorsignActivity extends Activity {
 
 
 
-        // Get String from Shared Preferences
+        // GetStringfromSharedPreferences ()
         final String namefinal  = app_preferences.getString("name", "...");
         newdoorsign_name.setText(namefinal);
 
@@ -150,7 +150,7 @@ public class newdoorsignActivity extends Activity {
         final String informationfinal  = app_preferences.getString("information", "...");
         newdoorsign_information.setText(informationfinal);
 
-
+        // GetStringfromSharedPreferences ()_end
 
 
 

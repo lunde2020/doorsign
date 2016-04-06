@@ -1,3 +1,7 @@
+// Programmcode in Internet gefunden und angepasst!! ==> hier das erste mal mit Fragements
+
+
+
 package projekts.test.buttontest;
 
 //import com.bala.welcomescreens.R;

@@ -79,10 +79,10 @@ public class Main_Start extends Activity {
         homescreen_name = (TextView) findViewById(R.id.homescreen_name);
         contactphoto = (ImageView) findViewById(R.id.imageView3);
 
-       // final send_all_data senddata;
+        // final send_all_data senddata;
 
 
-       final SharedPreferences app_preferences =
+        final SharedPreferences app_preferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
         // Get String from Shared Preferences
         String namefinal = app_preferences.getString("name", "...");
@@ -107,6 +107,8 @@ public class Main_Start extends Activity {
                                                startActivity(i);
                                            }
                                        }
+
+
         );
 
         imageButton2.setOnClickListener(new View.OnClickListener() {
@@ -135,8 +137,8 @@ public class Main_Start extends Activity {
 
 
         imageButton3.setOnClickListener(new View.OnClickListener() {
-                                           @Override
-                                           public void onClick(View v) {
+                                            @Override
+                                            public void onClick(View v) {
 //                                               Thread networkConnectionThread = new Thread(new Runnable() {
 //                                                   @Override
 //                                                   public void run() {
@@ -174,21 +176,13 @@ public class Main_Start extends Activity {
 //                                               });
 //
 //                                               networkConnectionThread.start();
-                                               myVib.vibrate(50);
+                                                myVib.vibrate(50);
 
-                                               Intent i = new Intent(getApplicationContext(), newconfigActivity.class);
-                                               startActivity(i);
-                                           }
-                                       }
+                                                Intent i = new Intent(getApplicationContext(), newconfigActivity.class);
+                                                startActivity(i);
+                                            }
+                                        }
         );
-
-
-
-
-
-
-
-
 
 
         imageButton6.setOnClickListener(new View.OnClickListener() {
@@ -196,11 +190,10 @@ public class Main_Start extends Activity {
                                             public void onClick(View v) {
 
 
-
                                                 // Get String from Shared Preferences
-                                                final String ipadress  = app_preferences.getString("ipadress", "...");
+                                                final String ipadress = app_preferences.getString("ipadress", "...");
 
-                                                final String makeURL= ("http://"+ipadress+"/pixelserver/SaveConfig.php");
+                                                final String makeURL = ("http://" + ipadress + "/pixelserver/SaveConfig.php");
                                                 // "http://192.168.178.81/pixelserver/SaveConfig.php"
 
 
@@ -213,16 +206,16 @@ public class Main_Start extends Activity {
                                                     @Override
                                                     public void run() {
                                                         try {
-                                                           // URL url = new URL("http://10.0.2.2/pixelserver/SaveConfig.php");
+                                                            // URL url = new URL("http://10.0.2.2/pixelserver/SaveConfig.php");
 
                                                             URL url = new URL(makeURL);
-                                                         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                                                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                                                             urlConnection.setRequestMethod("POST");
 
                                                             OutputStreamWriter writer = new OutputStreamWriter(
                                                                     urlConnection.getOutputStream());
 
-                                                            writer.write("json="+Main_Start.this.getConfig().toString());
+                                                            writer.write("json=" + Main_Start.this.getConfig().toString());
                                                             writer.close();
                                                             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                                                                 Log.d("URL-CONNECTION", "HTTP REQUEST OK!");
@@ -235,7 +228,7 @@ public class Main_Start extends Activity {
                                                             } else {
                                                                 Log.d("URL-CONNECTION", "HTTP REQUEST ERROR!");
                                                             }
-                                                       } catch (MalformedURLException e) {
+                                                        } catch (MalformedURLException e) {
                                                             e.printStackTrace();
                                                         } catch (IOException e) {
                                                             e.printStackTrace();
@@ -270,13 +263,6 @@ public class Main_Start extends Activity {
             configObject.put("template", app_preferences.getString("template", "..."));
             configObject.put("mode", app_preferences.getString("mode", "..."));
             configObject.put("delete", app_preferences.getBoolean("delete", false));
-
-
-
-
-
-
-
 
 
         } catch (JSONException e) {
@@ -316,12 +302,12 @@ public class Main_Start extends Activity {
                 //ImageView contactphoto2=(ImageView)findViewById(R.id.imageView3);
 
 
-                   Bitmap contactphoto1 = BitmapFactory.decodeStream(openPhoto(longcontactID));
-                    contactphoto.setImageBitmap(contactphoto1);
+                Bitmap contactphoto1 = BitmapFactory.decodeStream(openPhoto(longcontactID));
+                contactphoto.setImageBitmap(contactphoto1);
 
 
-   //             Bitmap contactphoto1 = BitmapFactory.decodeStream(openDisplayPhoto(longcontactID));
-     //           contactphoto.setImageBitmap(contactphoto1);
+                //             Bitmap contactphoto1 = BitmapFactory.decodeStream(openDisplayPhoto(longcontactID));
+                //           contactphoto.setImageBitmap(contactphoto1);
 
 
                 String file_path = Environment.getExternalStorageDirectory().getAbsolutePath() +
@@ -524,7 +510,6 @@ public class Main_Start extends Activity {
                     SharedPreferences.Editor SP_status = app_preferences.edit();
                     SP_status.putString("status", "Status / Notiz");
                     SP_status.commit();
-
 
 
                 } else {

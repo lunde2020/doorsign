@@ -5,7 +5,7 @@
 
     //Intro und Splash screen
     <string name="screen1_title">Aktualisiere Türschild</string>
-    <string name="screen1_desc">Hier kannst du dein eigenes Türschild erstellen und aktualisieren. Zuvor musst du jedoch einen Kontakt auswählen.</string>
+    <string name="screen1_desc">Hier kannst du dein eigenes Türschild erstellen und aktualisieren. Zuvor kannst du einen Kontakt auswählen.</string>
     <string name="screen2_title">Neuer Benutzer</string>
     <string name="screen2_desc">Die Benutzer werden mit deinem Google-Konto synchronisiert. Wähle einfach aus!</string>
     <string name="screen3_title">Konfiguriere Türschild</string>
@@ -20,29 +20,32 @@
 
 
     <string name="faq1_q">Wie richte ich ein neues Türschild ein?</string>
-    <string name="faq1_a">(1) Beim ersten Anschalten eines neuen Türschilds wird der Konfigurationsmodus gestartet. Folgen Sie den Anweisungen auf dem Türschild. \n (2) Sind die Daten korrekt wird nach dem ersten einloggen am Pixelserver der Benutzer Max Mustermann angezeigt - die Verbindung wurde erkannt. \n (3) Unter Informationen entnehmen Sie nun die MAC-Adresse und den automatisch generierten PIN des Türschild. \n (4) Tragen Sie diese Werte in "Konfiguriere Türschild" ein. \n (5) Die IP-Adresse des Pixelservers lautet 192.168.44.1. </string>
+    <string name="faq1_a">(1) Beim ersten Anschalten eines neuen Türschilds wird der Konfigurationsmodus gestartet. Folgen Sie den Anweisungen auf dem Türschild. \n(2) Sind die Daten korrekt wird nach dem ersten einloggen am Pixelserver der Benutzer Max Mustermann angezeigt - die Verbindung wurde erkannt. \n\n  Standarddaten:\n      Data Source: http://raspberrypi/pixelserver/start.php \n      Access-Point:Eink_Raspberry_AP1\n      Passwort: raspberrypi\n\n(3) Unter Informationen entnehmen Sie nun die MAC-Adresse und den automatisch generierten PIN des Türschilds.\n(4) Tragen Sie diese Werte in "Konfiguriere Türschild" ein. \n(5) Die IP-Adresse des Pixelservers lautet 192.168.42.1.</string>
 
     <string name="faq2_q">Wie ändere ich die PIN?</string>
-    <string name="faq2_a">Eine PIN-Änderung wurde noch nicht implementiert. Es kann jedoch über  </string>
+    <string name="faq2_a">Eine PIN-Änderung wurde noch nicht implementiert. Es können jedoch über die Funktion "Lösche MAC-Eintrag" alle Daten die die eingestellt MAC-Adresse betreffen gelöscht werden. Das Türschild befindet sich nun wieder in der Konfigurationsphase (2). Eine neue PIN wird unter der Information von Max Mustermann angezeigt.\nZum löschen des Eintrags ist keine richtige PIN notwendig (falls PIN vergessen)!</string>
 
 
-    <string name="faq3_q">dooRsign</string>
-    <string name="faq3_a">dooRsign</string>
+    <string name="faq3_q">Wie sehe ich ob Daten gesendet wurden?</string>
+    <string name="faq3_a">Bisher wird eine erfolgreiche HTTP-Verbindung zum Server nur durch ein haptisches Feedback beim drücken des Icons „Sende Daten“ signalisiert. Dabei wird nicht überprüft ob die MAC-Adresse oder PIN gültig ist, sondern jedeglich ob eine Verbindung zum Server hergestellt worden konnte</string>
 
 
-    <string name="faq4_q">dooRsign</string>
-    <string name="faq4_a">dooRsign</string>
+    <string name="faq4_q">Rechte bei Android Version 6 (Marshmallow) oder höher?</string>
+    <string name="faq4_a">Hier müssen die benötigten Rechte unter Einstellungen -> Apps -> doorEink seperat freigeschalten werden. Bei Versionen >6 bestätigen Sie diese bei der Installation. </string>
 
 
-    <string name="faq5_q">dooRsign</string>
-    <string name="faq5_a">dooRsign</string>
+    <string name="faq5_q">Türschild streamt weiße Seite?</string>
+    <string name="faq5_a">Das Türschild aktualisiert bisher leider nur jedes zweite mal. Wenn dies nicht funktioniert überprüfe die Verbindung zum AccessPoint oder den Status des XAMPP-Servers. Teilweise wird der MAC-Adressen Ordner wegen fehlender Zugriffsrechte bei Löschung des Eintrags nicht gelöscht. Dieser muss dann manuell auf dem Rasperry entfernt werden \n</string>
 
 
-    <string name="faq6_q">dooRsign</string>
-    <string name="faq6_a">dooRsign</string>
+    <string name="faq6_q">Daten der App werden nicht übernommen?</string>
+    <string name="faq6_a">Achte bei der Konfiguration darauf, dass keine Leerzeichen bei IP- und MAC-Adresse sowie bei der PIN enthalten sind. Bisher ist noch kein Schutz gegen solche Falscheingaben vorhanden.</string>
 
 
-    <string name="faq7_q">dooRsign</string>
-    <string name="faq7_a">dooRsign</string>
+    <string name="faq7_q">Fragen zu Vorlagen und Moden? </string>
+    <string name="faq7_a">Bisher sind insgesamt drei Vorlagen und Moden vorhanden. Das heißt es kann eine Zahl zwischen 0 und 2 eingegeben werden. Jedoch ist der dritte Modus  </string>
+
+    <string name="faq8_q">Platzhalter</string>
+    <string name="faq8_a">Jaja der gute Platzhalter. Hab ich eigentlisch schon erwähnt, dass das Projekt sau viel Aufwand ist? =) naja dann jetzt! Bier an die Macht!</string>
 
 </resources>

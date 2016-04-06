@@ -20,16 +20,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ButtonActivity"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity
-            android:name=".ShowPictureActivity"
-            android:screenOrientation="portrait">
-        </activity>
-
         <activity android:name=".Start"></activity>
 
         <activity
@@ -38,8 +28,6 @@
             android:windowSoftInputMode="stateHidden">
         </activity>
 
-
-        <activity android:name=".ReadContact"></activity>
 
         <activity
             android:name=".newdoorsignActivity"

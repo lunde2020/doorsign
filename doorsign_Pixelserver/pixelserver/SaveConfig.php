@@ -47,32 +47,11 @@ if ($pinapp == $pinsha1)
 		fclose($fp);
 		
 		$delete 	= $configContentJsonObject->{'delete'};
-
-		if ($delete){
-			
-		$filedelete = $path . "/delete.txt";	
-		$fp = fopen($filedelete, 'w');
-		fwrite($fp, "delete"); 
-		fclose($fp);
-		
-		$path = escapeshellarg($path);
-		exec("rmdir /s /q $path");
-		
-		
-		
-
-		if(!rmdir($path))
-				{
-					$filedeletefb = $path . "/deletefb.txt";	
-					$fp = fopen($filedeletefb, 'w');
-					fwrite($fp, "hat nicht geklappt"); 
-					fclose($fp);
-				}
+	
 
 }
-		
-		
-}
+	
+
 
 else 
 {	
@@ -82,4 +61,17 @@ else
 		fclose($fp);
 		
 	}
+	
+	
+	if ($delete){
+			
+		$filedelete = $path . "/delete.txt";	
+		$fp = fopen($filedelete, 'w');
+		fwrite($fp, "delete"); 
+		fclose($fp);
+		
+		$path = escapeshellarg($path);
+		exec("rmdir /s /q $path");
+		}
+		
 ?>
